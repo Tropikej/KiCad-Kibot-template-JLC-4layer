@@ -1,7 +1,7 @@
 (version 1)
-#PCBWay Custom DRC for Kicad 8
+# JLCPCB Custom DRC for Kicad 8
 
-# 6 layers, 2 oz outer and 1 oz inner. Optimized for lowest cost.
+# 4 layers, 2 oz outer and 1 oz inner. Optimized for lowest cost.
 
 # ----------------------------------- Minimum trace width and spacing --------------------
 
@@ -101,13 +101,13 @@
 # ----------------------------------- Board Outlines (PICK ONE) -------------------------------------
 #Default Routed Edge Clearance
 (rule "Trace to Outline"
-(constraint edge_clearance (min 0.3mm))
+(constraint edge_clearance (min 0.25mm))
 (condition "A.Type == 'track'"))
 
 # ----------------------------------- Silkscreen ----------------------------------------------------
 (rule "Minimum Text"
-(constraint text_thickness (min 0.15mm))
-(constraint text_height (min 0.8mm))
+(constraint text_thickness (min 0.153mm))
+(constraint text_height (min 1.0mm))
 (layer "?.Silkscreen"))
 
 (rule "Pad to Silkscreen"
